@@ -5,7 +5,7 @@ KGFloatingDrawer is a reimplementation of
 Swift. A floating drawer style navigation. KGFloatingDrawer provides a unique
 twist on the nav drawer pattern.
 
-![](https://github.com/KyleGoddard/KGFloatingDrawer/blob/master/KGDrawerViewController/Example/kgfloatingdrawer_github_preview.gif)
+![](https://github.com/KyleGoddard/KGFloatingDrawer/blob/master/kgfloatingdrawer_github_preview.gif)
 
 #Usage
 
