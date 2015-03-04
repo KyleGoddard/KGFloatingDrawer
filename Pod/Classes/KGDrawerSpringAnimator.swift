@@ -12,10 +12,10 @@ public class KGDrawerSpringAnimator: NSObject {
     
     let kKGCenterViewDestinationScale:CGFloat = 0.7
     
-    var animationDelay: NSTimeInterval        = 0.0
-    var animationDuration: NSTimeInterval     = 0.7
-    var initialSpringVelocity: CGFloat        = 9.1 // 9.1 m/s == earth gravity accel.
-    var springDamping: CGFloat                = 0.8
+    public var animationDelay: NSTimeInterval        = 0.0
+    public var animationDuration: NSTimeInterval     = 0.7
+    public var initialSpringVelocity: CGFloat        = 9.8 // 9.1 m/s == earth gravity accel.
+    public var springDamping: CGFloat                = 0.8
     
     // TODO: can swift have private functions in a protocol?
     private func applyTransforms(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
@@ -45,7 +45,7 @@ public class KGDrawerSpringAnimator: NSObject {
 
 extension KGDrawerSpringAnimator: KGDrawerAnimating {
     
-    func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
         if (animated) {
             UIView.animateWithDuration(animationDuration,
                 delay: animationDelay,
@@ -61,7 +61,7 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
         }
     }
     
-    func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
         if (animated) {
             UIView.animateWithDuration(animationDuration,
                 delay: animationDelay,
@@ -76,11 +76,11 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
         }
     }
     
-    func willRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
+    public func willRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
         
     }
     
-    func didRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
+    public func didRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
         UIView.animateWithDuration(animationDuration,
             delay: animationDelay,
             usingSpringWithDamping: springDamping,

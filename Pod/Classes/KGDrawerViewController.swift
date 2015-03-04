@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum KGDrawerSide: CGFloat {
+public enum KGDrawerSide: CGFloat {
     case None  = 0
     case Left  = 1
     case Right = -1
@@ -20,11 +20,11 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Initialization
     
-    override init() {
+    override public init() {
         super.init()
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
@@ -53,7 +53,7 @@ public class KGDrawerViewController: UIViewController {
     // TODO: Add ability to supply custom animator.
     
     private var _animator: KGDrawerSpringAnimator?
-    var animator: KGDrawerSpringAnimator {
+    public var animator: KGDrawerSpringAnimator {
         get {
             if let retVal = _animator {
                 return retVal
@@ -66,7 +66,7 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Interaction
     
-    func openDrawer(side: KGDrawerSide, animated:Bool, complete: (finished: Bool) -> Void) {
+    public func openDrawer(side: KGDrawerSide, animated:Bool, complete: (finished: Bool) -> Void) {
         if currentlyOpenedSide != side {
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
@@ -86,7 +86,7 @@ public class KGDrawerViewController: UIViewController {
         currentlyOpenedSide = side
     }
     
-    func closeDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func closeDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
         if (currentlyOpenedSide == side && currentlyOpenedSide != .None) {
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
@@ -98,7 +98,7 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    func toggleDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func toggleDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
         if side != .None {
             if side == currentlyOpenedSide {
                 closeDrawer(side, animated: animated, complete: complete)
@@ -162,11 +162,11 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Private computed properties
     
-    var currentlyOpenedSide: KGDrawerSide = .None
+    public var currentlyOpenedSide: KGDrawerSide = .None
     
     // MARK: Accessors
     private var _leftViewController: UIViewController?
-    var leftViewController: UIViewController? {
+    public var leftViewController: UIViewController? {
         get {
             return _leftViewController
         }
@@ -177,7 +177,7 @@ public class KGDrawerViewController: UIViewController {
     }
     
     private var _rightViewController: UIViewController?
-    var rightViewController: UIViewController? {
+    public var rightViewController: UIViewController? {
         get {
             return _rightViewController
         }
@@ -188,7 +188,7 @@ public class KGDrawerViewController: UIViewController {
     }
     
     private var _centerViewController: UIViewController?
-    var centerViewController: UIViewController? {
+    public var centerViewController: UIViewController? {
         get {
             return _centerViewController
         }
@@ -204,7 +204,7 @@ public class KGDrawerViewController: UIViewController {
         return gesture
     }()
     
-    var leftDrawerWidth: CGFloat {
+    public var leftDrawerWidth: CGFloat {
         get  {
             return drawerView.leftViewContainerWidth
         }
@@ -213,7 +213,7 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    var rightDrawerWidth: CGFloat {
+    public var rightDrawerWidth: CGFloat {
         get {
             return drawerView.rightViewContainerWidth
         }
@@ -222,19 +222,19 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    var leftDrawerRevealWidth: CGFloat {
+    public var leftDrawerRevealWidth: CGFloat {
         get {
             return drawerView.leftViewContainerWidth
         }
     }
     
-    var rightDrawerRevealWidth: CGFloat {
+    public var rightDrawerRevealWidth: CGFloat {
         get {
             return drawerView.rightViewContainerWidth
         }
     }
     
-    var backgroundImage: UIImage? {
+    public var backgroundImage: UIImage? {
         get {
             return drawerView.backgroundImageView.image
         }

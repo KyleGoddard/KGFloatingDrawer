@@ -9,7 +9,7 @@
 //import Foundation
 import UIKit
 
-protocol KGDrawerAnimating {
+public protocol KGDrawerAnimating {
     
     func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void)
     
