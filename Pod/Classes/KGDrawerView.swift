@@ -8,14 +8,14 @@
 
 import UIKit
 
-class KGDrawerView: UIView {
+public class KGDrawerView: UIView {
     
     
     let kKGCenterViewContainerCornerRadius: CGFloat = 5.0
     let kKGDefaultViewContainerWidth: CGFloat = 280.0
 
     // MARK: Initialization
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -37,11 +37,11 @@ class KGDrawerView: UIView {
         self.addConstraints(rightViewConstraints)
     }
     
-    override func willMoveToSuperview(newSuperview: UIView?) {
+    override public func willMoveToSuperview(newSuperview: UIView?) {
         self.bringSubviewToFront(self.centerViewContainer)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         updateShadowPath()
     }
     

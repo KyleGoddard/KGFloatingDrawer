@@ -14,7 +14,7 @@ enum KGDrawerSide: CGFloat {
     case Right = -1
 }
 
-class KGDrawerViewController: UIViewController {
+public class KGDrawerViewController: UIViewController {
     
     let defaultDuration:NSTimeInterval = 0.3
     
@@ -28,11 +28,11 @@ class KGDrawerViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
+    override public func loadView() {
         view = drawerView
     }
     
@@ -245,17 +245,17 @@ class KGDrawerViewController: UIViewController {
     
     // MARK: Status Bar
     
-    override func childViewControllerForStatusBarHidden() -> UIViewController? {
+    override public func childViewControllerForStatusBarHidden() -> UIViewController? {
         return centerViewController
     }
     
-    override func childViewControllerForStatusBarStyle() -> UIViewController? {
+    override public func childViewControllerForStatusBarStyle() -> UIViewController? {
         return centerViewController
     }
     
     // MARK: Memory Management
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     

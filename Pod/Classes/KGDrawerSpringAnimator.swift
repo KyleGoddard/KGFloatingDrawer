@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KGDrawerSpringAnimator: NSObject {
+public class KGDrawerSpringAnimator: NSObject {
     
     let kKGCenterViewDestinationScale:CGFloat = 0.7
     
