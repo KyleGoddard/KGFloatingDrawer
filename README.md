@@ -34,7 +34,7 @@ func prepareDrawerViewController() -> KGDrawerViewController {
 KGFloatingDrawer can be installed as a CocoaPod. To install it, simply add the following line to your Podfile:
 
 ```
-pod 'KGFloatingDrawer', :git => 'https://github.com/KyleGoddard/KGFloatingDrawer.git', :tag => '0.1.2'
+pod 'KGFloatingDrawer', '~> 0.1.2'
 ```
 
 ###Important Note
