@@ -1,20 +1,14 @@
 PODS:
-  - KGFloatingDrawer (0.1.1)
+  - KGFloatingDrawer (0.1.3)
 
 DEPENDENCIES:
-  - KGFloatingDrawer (from `https://github.com/KyleGoddard/KGFloatingDrawer.git`, tag `0.1.2`)
+  - KGFloatingDrawer (from `../`)
 
 EXTERNAL SOURCES:
   KGFloatingDrawer:
-    :git: https://github.com/KyleGoddard/KGFloatingDrawer.git
-    :tag: 0.1.2
-
-CHECKOUT OPTIONS:
-  KGFloatingDrawer:
-    :git: https://github.com/KyleGoddard/KGFloatingDrawer.git
-    :tag: 0.1.2
+    :path: ../
 
 SPEC CHECKSUMS:
-  KGFloatingDrawer: f9722e2ba2a2bd25ff2b0a81c80318940c5413bd
+  KGFloatingDrawer: 159abb66ba8fe4fc10e15dbb7e9fbb394b4a78fa
 
 COCOAPODS: 0.36.0.rc.1

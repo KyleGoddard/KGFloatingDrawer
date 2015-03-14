@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8C933009EE3BBD7466645F72"
+               BlueprintIdentifier = "0E1A9D9B69C48841FDBA5609"
                BuildableName = "Pods_KGFloatingDrawer_Example.framework"
                BlueprintName = "Pods-KGFloatingDrawer-Example"
                ReferencedContainer = "container:Pods.xcodeproj">

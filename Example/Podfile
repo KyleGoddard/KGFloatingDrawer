@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '8.0'
 
 target 'KGFloatingDrawer-Example' do
-  pod 'KGFloatingDrawer', :git => 'https://github.com/KyleGoddard/KGFloatingDrawer.git', :tag => '0.1.2'
+  pod 'KGFloatingDrawer', :path => "../"
 end
 
 target 'KGFloatingDrawer-ExampleTests' do

@@ -10,5 +10,5 @@
 #define COCOAPODS_POD_AVAILABLE_KGFloatingDrawer
 #define COCOAPODS_VERSION_MAJOR_KGFloatingDrawer 0
 #define COCOAPODS_VERSION_MINOR_KGFloatingDrawer 1
-#define COCOAPODS_VERSION_PATCH_KGFloatingDrawer 1
+#define COCOAPODS_VERSION_PATCH_KGFloatingDrawer 3
 
