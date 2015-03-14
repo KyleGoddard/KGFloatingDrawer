@@ -19,10 +19,6 @@ public class KGDrawerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init() {
-        super.init()
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
