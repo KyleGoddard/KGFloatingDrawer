@@ -1,8 +1,3 @@
-###Important Note
-
-This project is using `Swift 1.2` which is currently in beta and cannot be used in applications
-submitted to the Apple App Store.
-
 # KGFloatingDrawer
 
 KGFloatingDrawer is a reimplementation of
