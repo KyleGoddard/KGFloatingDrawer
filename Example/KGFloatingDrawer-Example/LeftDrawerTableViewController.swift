@@ -35,5 +35,9 @@ class LeftDrawerTableViewController: UITableViewController {
             appDelegate.centerViewController = appDelegate.drawerSettingsViewController()
         }
     }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
+    }
 
 }
