@@ -64,6 +64,8 @@ public class KGDrawerViewController: UIViewController {
     
     public func openDrawer(side: KGDrawerSide, animated:Bool, complete: (finished: Bool) -> Void) {
         if currentlyOpenedSide != side {
+            let containerToOpen = viewContainer(side)
+            containerToOpen?.viewWillAppear(true)
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
                 if currentlyOpenedSide != .None {
@@ -71,7 +73,10 @@ public class KGDrawerViewController: UIViewController {
                             self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
                     }
                 } else {
-                    self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
+                    self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: { (finished) -> Void in
+                        containerToOpen?.viewDidAppear(true)
+                        complete(finished: finished)
+                    })
                 }
                 
                 addDrawerGestures()
@@ -84,9 +89,14 @@ public class KGDrawerViewController: UIViewController {
     
     public func closeDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
         if (currentlyOpenedSide == side && currentlyOpenedSide != .None) {
+            let containerToClose = viewContainer(side)
+            containerToClose?.viewWillDisappear(true)
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
-                animator.dismissDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
+                animator.dismissDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: { (finished) -> Void in
+                    containerToClose?.viewDidDisappear(true)
+                    complete(finished: finished)
+                })
                 currentlyOpenedSide = .None
                 restoreGestures()
                 drawerView.willCloseDrawer(self)
