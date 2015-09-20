@@ -118,7 +118,7 @@ class KGDrawerSettingsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var selectedRowIndex:Int = indexPath.section
+        let selectedRowIndex:Int = indexPath.section
         if selectedRowIndex == resetRowIndex {
             reset()
         }

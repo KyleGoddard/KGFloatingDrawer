@@ -34,7 +34,7 @@ pod 'KGFloatingDrawer', '~> 0.1.3'
 
 ###Important Note
 
-KGFloatingDrawer requires `Swift 1.2`, `XCode 6.3` and `CocoaPods 0.36.0`
+KGFloatingDrawer requires `Swift 2.0`, `XCode 7.0` and `CocoaPods 0.36.0`
 
 
 #How it Works

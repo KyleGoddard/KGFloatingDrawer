@@ -15,7 +15,7 @@ public class KGDrawerView: UIView {
     let kKGDefaultViewContainerWidth: CGFloat = 280.0
 
     // MARK: Initialization
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -50,7 +50,7 @@ public class KGDrawerView: UIView {
             }
             let imageView = UIImageView(frame: self.frame)
             imageView.contentMode = .ScaleAspectFill
-            imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
             _backgroundImageView = imageView
             return imageView
         }
@@ -81,7 +81,7 @@ public class KGDrawerView: UIView {
                 return container
             }
             let container = UIView(frame: self.frame)
-            container.setTranslatesAutoresizingMaskIntoConstraints(false)
+            container.translatesAutoresizingMaskIntoConstraints = false
             _leftViewContainer = container
             return container
         }
@@ -122,7 +122,7 @@ public class KGDrawerView: UIView {
                 return retVal
             }
             let retVal = UIView(frame: self.frame)
-            retVal.setTranslatesAutoresizingMaskIntoConstraints(false)
+            retVal.translatesAutoresizingMaskIntoConstraints = false
             _rightViewContainer = retVal
             return retVal
         }
@@ -165,7 +165,7 @@ public class KGDrawerView: UIView {
                 return container
             }
             let container = UIView(frame: self.frame)
-            container.setTranslatesAutoresizingMaskIntoConstraints(false)
+            container.translatesAutoresizingMaskIntoConstraints = false
             _centerViewContainer = container
             return container
         }
@@ -212,17 +212,18 @@ public class KGDrawerView: UIView {
             return _shouldRadiusCenterViewController
         }
         set {
-            var view = self.centerViewContainer.subviews.first as! UIView
-            if (newValue) {
-                view.layer.borderColor   = UIColor(white: 1.0, alpha: 0.15).CGColor
-                view.layer.borderWidth   = 1.0
-                view.layer.masksToBounds = true
-                view.layer.cornerRadius  = kKGCenterViewContainerCornerRadius
-            } else {
-                view.layer.borderColor   = UIColor.clearColor().CGColor
-                view.layer.borderWidth   = 0.0
-                view.layer.masksToBounds = false
-                view.layer.cornerRadius  = 0.0
+            if let view = self.centerViewContainer.subviews.first {
+                if (newValue) {
+                    view.layer.borderColor   = UIColor(white: 1.0, alpha: 0.15).CGColor
+                    view.layer.borderWidth   = 1.0
+                    view.layer.masksToBounds = true
+                    view.layer.cornerRadius  = kKGCenterViewContainerCornerRadius
+                } else {
+                    view.layer.borderColor   = UIColor.clearColor().CGColor
+                    view.layer.borderWidth   = 0.0
+                    view.layer.masksToBounds = false
+                    view.layer.cornerRadius  = 0.0
+                }
             }
             _shouldRadiusCenterViewController = newValue
         }
@@ -239,7 +240,7 @@ public class KGDrawerView: UIView {
             return false
         }
         set {
-            var layer = self.centerViewContainer.layer
+            let layer = self.centerViewContainer.layer
             if (newValue) {
                 layer.shadowRadius  = 20.0
                 layer.shadowColor   = UIColor.blackColor().CGColor
@@ -263,8 +264,8 @@ public class KGDrawerView: UIView {
     // MARK: Helpers
     
     func updateShadowPath() {
-        var layer = self.centerViewContainer.layer
-        var increase = layer.shadowRadius
+        let layer = self.centerViewContainer.layer
+        let increase = layer.shadowRadius
         var rect = self.centerViewContainer.bounds
         
         rect.origin.x -= increase
