@@ -23,7 +23,7 @@ public class KGDrawerViewController: UIViewController {
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-
+    
     required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -68,7 +68,7 @@ public class KGDrawerViewController: UIViewController {
                 let centerView = drawerView.centerViewContainer
                 if currentlyOpenedSide != .None {
                     closeDrawer(side, animated: animated) { finished in
-                            self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
+                        self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
                     }
                 } else {
                     self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
@@ -145,13 +145,13 @@ public class KGDrawerViewController: UIViewController {
         container.addSubview(destinationViewController.view)
         
         let destinationView = destinationViewController.view
-        destinationView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        destinationView.translatesAutoresizingMaskIntoConstraints = false
         
-        container.removeConstraints(container.constraints())
+        container.removeConstraints(container.constraints)
         
         let views: [String:UIView] = ["v1" : destinationView]
-        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v1]|", options: NSLayoutFormatOptions(0), metrics: nil, views: views))
-        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[v1]|", options: NSLayoutFormatOptions(0), metrics: nil, views: views))
+        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
         
         destinationViewController.didMoveToParentViewController(self)
     }
@@ -198,7 +198,7 @@ public class KGDrawerViewController: UIViewController {
         [unowned self] in
         let gesture = UITapGestureRecognizer(target: self, action: "centerViewContainerTapped:")
         return gesture
-    }()
+        }()
     
     public var leftDrawerWidth: CGFloat {
         get  {

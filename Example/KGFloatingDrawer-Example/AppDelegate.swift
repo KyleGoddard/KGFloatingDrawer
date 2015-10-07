@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func viewControllerForStoryboardId(storyboardId: String) -> UIViewController {
-        let viewController: UIViewController = drawerStoryboard().instantiateViewControllerWithIdentifier(storyboardId) as! UIViewController
+        let viewController: UIViewController = drawerStoryboard().instantiateViewControllerWithIdentifier(storyboardId) 
         return viewController
     }
     
