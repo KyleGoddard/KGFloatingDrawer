@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "KGFloatingDrawer"
-  s.version               = "0.1.3"
+  s.version               = "0.2.0"
   s.summary               = "A floating navigation drawer with an interesting animated presentation written in Swift."
   s.homepage              = "https://github.com/KyleGoddard/KGFloatingDrawer"
   s.screenshots           = ["https://raw.githubusercontent.com/KyleGoddard/KGFloatingDrawer/master/kgfloatingdrawer_github_preview.gif"]
