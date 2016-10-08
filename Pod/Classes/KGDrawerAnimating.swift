@@ -11,9 +11,9 @@ import UIKit
 
 public protocol KGDrawerAnimating {
     
-    func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (done: Bool) -> Void)
+    func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (Bool) -> Void)
     
-    func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (done: Bool) -> Void)
+    func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (Bool) -> Void)
     
     
     /**
