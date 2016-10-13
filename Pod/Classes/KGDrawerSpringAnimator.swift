@@ -8,36 +8,36 @@
 
 import UIKit
 
-public class KGDrawerSpringAnimator: NSObject {
+open class KGDrawerSpringAnimator: NSObject {
     
     let kKGCenterViewDestinationScale:CGFloat = 0.7
     
-    public var animationDelay: NSTimeInterval        = 0.0
-    public var animationDuration: NSTimeInterval     = 0.7
-    public var initialSpringVelocity: CGFloat        = 9.8 // 9.1 m/s == earth gravity accel.
-    public var springDamping: CGFloat                = 0.8
+    open var animationDelay: TimeInterval        = 0.0
+    open var animationDuration: TimeInterval     = 0.7
+    open var initialSpringVelocity: CGFloat        = 9.8 // 9.1 m/s == earth gravity accel.
+    open var springDamping: CGFloat                = 0.8
     
     // TODO: can swift have private functions in a protocol?
-    private func applyTransforms(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
+    fileprivate func applyTransforms(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
         
         let direction = side.rawValue
-        let sideWidth = CGRectGetWidth(drawerView.bounds)
-        let centerWidth = CGRectGetWidth(centerView.bounds)
+        let sideWidth = drawerView.bounds.width
+        let centerWidth = centerView.bounds.width
         let centerHorizontalOffset = direction * sideWidth
         let scaledCenterViewHorizontalOffset = direction * (sideWidth - (centerWidth - kKGCenterViewDestinationScale * centerWidth) / 2.0)
         
-        let sideTransform = CGAffineTransformMakeTranslation(centerHorizontalOffset, 0.0)
+        let sideTransform = CGAffineTransform(translationX: centerHorizontalOffset, y: 0.0)
         drawerView.transform = sideTransform
         
-        let centerTranslate = CGAffineTransformMakeTranslation(scaledCenterViewHorizontalOffset, 0.0)
-        let centerScale = CGAffineTransformMakeScale(kKGCenterViewDestinationScale, kKGCenterViewDestinationScale)
-        centerView.transform = CGAffineTransformConcat(centerScale, centerTranslate)
+        let centerTranslate = CGAffineTransform(translationX: scaledCenterViewHorizontalOffset, y: 0.0)
+        let centerScale = CGAffineTransform(scaleX: kKGCenterViewDestinationScale, y: kKGCenterViewDestinationScale)
+        centerView.transform = centerScale.concatenating(centerTranslate)
         
     }
     
-    private func resetTransforms(views: [UIView]) {
+    fileprivate func resetTransforms(_ views: [UIView]) {
         for view in views {
-            view.transform = CGAffineTransformIdentity
+            view.transform = CGAffineTransform.identity
         }
     }
 
@@ -45,13 +45,13 @@ public class KGDrawerSpringAnimator: NSObject {
 
 extension KGDrawerSpringAnimator: KGDrawerAnimating {
     
-    public func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func openDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete:  @escaping (Bool) -> Void) {
         if (animated) {
-            UIView.animateWithDuration(animationDuration,
+            UIView.animate(withDuration: animationDuration,
                 delay: animationDelay,
                 usingSpringWithDamping: springDamping,
                 initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.CurveLinear,
+                options: UIViewAnimationOptions.curveLinear,
                 animations: {
                     self.applyTransforms(side, drawerView: drawerView, centerView: centerView)
                     
@@ -61,13 +61,13 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
         }
     }
     
-    public func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void) {
+    public func dismissDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: @escaping (Bool) -> Void) {
         if (animated) {
-            UIView.animateWithDuration(animationDuration,
+            UIView.animate(withDuration: animationDuration,
                 delay: animationDelay,
                 usingSpringWithDamping: springDamping,
                 initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.CurveLinear,
+                options: UIViewAnimationOptions.curveLinear,
                 animations: {
                     self.resetTransforms([drawerView, centerView])
             }, completion: complete)
@@ -76,16 +76,16 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
         }
     }
     
-    public func willRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
+    public func willRotateWithDrawerOpen(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
         
     }
     
-    public func didRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
-        UIView.animateWithDuration(animationDuration,
+    public func didRotateWithDrawerOpen(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
+        UIView.animate(withDuration: animationDuration,
             delay: animationDelay,
             usingSpringWithDamping: springDamping,
             initialSpringVelocity: initialSpringVelocity,
-            options: UIViewAnimationOptions.CurveLinear,
+            options: UIViewAnimationOptions.curveLinear,
             animations: {}, completion: nil )
     }
     
