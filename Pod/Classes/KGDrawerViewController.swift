@@ -9,18 +9,18 @@
 import UIKit
 
 public enum KGDrawerSide: CGFloat {
-    case None  = 0
-    case Left  = 1
-    case Right = -1
+    case none  = 0
+    case left  = 1
+    case right = -1
 }
 
-public class KGDrawerViewController: UIViewController {
+open class KGDrawerViewController: UIViewController {
     
-    let defaultDuration:NSTimeInterval = 0.3
+    let defaultDuration:TimeInterval = 0.3
     
     // MARK: Initialization
     
-    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
@@ -28,18 +28,18 @@ public class KGDrawerViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func loadView() {
+    override open func loadView() {
         view = drawerView
     }
     
     
-    private var _drawerView: KGDrawerView?
+    fileprivate var _drawerView: KGDrawerView?
     var drawerView: KGDrawerView {
         get {
             if let retVal = _drawerView {
                 return retVal
             }
-            let rect = UIScreen.mainScreen().bounds
+            let rect = UIScreen.main.bounds
             let retVal = KGDrawerView(frame: rect)
             _drawerView = retVal
             return retVal
@@ -48,8 +48,8 @@ public class KGDrawerViewController: UIViewController {
     
     // TODO: Add ability to supply custom animator.
     
-    private var _animator: KGDrawerSpringAnimator?
-    public var animator: KGDrawerSpringAnimator {
+    fileprivate var _animator: KGDrawerSpringAnimator?
+    open var animator: KGDrawerSpringAnimator {
         get {
             if let retVal = _animator {
                 return retVal
@@ -62,11 +62,11 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Interaction
     
-    public func openDrawer(side: KGDrawerSide, animated:Bool, complete: (finished: Bool) -> Void) {
+    open func openDrawer(_ side: KGDrawerSide, animated:Bool, complete: @escaping (_ finished: Bool) -> Void) {
         if currentlyOpenedSide != side {
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
-                if currentlyOpenedSide != .None {
+                if currentlyOpenedSide != .none {
                     closeDrawer(side, animated: animated) { finished in
                             self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
                     }
@@ -82,20 +82,20 @@ public class KGDrawerViewController: UIViewController {
         currentlyOpenedSide = side
     }
     
-    public func closeDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
-        if (currentlyOpenedSide == side && currentlyOpenedSide != .None) {
+    open func closeDrawer(_ side: KGDrawerSide, animated: Bool, complete: (_ finished: Bool) -> Void) {
+        if (currentlyOpenedSide == side && currentlyOpenedSide != .none) {
             if let sideView = drawerView.viewContainerForDrawerSide(side) {
                 let centerView = drawerView.centerViewContainer
                 animator.dismissDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
-                currentlyOpenedSide = .None
+                currentlyOpenedSide = .none
                 restoreGestures()
                 drawerView.willCloseDrawer(self)
             }
         }
     }
     
-    public func toggleDrawer(side: KGDrawerSide, animated: Bool, complete: (finished: Bool) -> Void) {
-        if side != .None {
+    open func toggleDrawer(_ side: KGDrawerSide, animated: Bool, complete: @escaping (_ finished: Bool) -> Void) {
+        if side != .none {
             if side == currentlyOpenedSide {
                 closeDrawer(side, animated: animated, complete: complete)
             } else {
@@ -107,16 +107,16 @@ public class KGDrawerViewController: UIViewController {
     // MARK: Gestures
     
     func addDrawerGestures() {
-        centerViewController?.view.userInteractionEnabled = false
+        centerViewController?.view.isUserInteractionEnabled = false
         drawerView.centerViewContainer.addGestureRecognizer(toggleDrawerTapGestureRecognizer)
     }
     
     func restoreGestures() {
         drawerView.centerViewContainer.removeGestureRecognizer(toggleDrawerTapGestureRecognizer)
-        centerViewController?.view.userInteractionEnabled = true
+        centerViewController?.view.isUserInteractionEnabled = true
     }
     
-    func centerViewContainerTapped(sender: AnyObject) {
+    func centerViewContainerTapped(_ sender: AnyObject) {
         closeDrawer(currentlyOpenedSide, animated: true) { (finished) -> Void in
             // Do nothing
         }
@@ -124,20 +124,20 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Helpers
     
-    func viewContainer(side: KGDrawerSide) -> UIViewController? {
+    func viewContainer(_ side: KGDrawerSide) -> UIViewController? {
         switch side {
-        case .Left:
+        case .left:
             return self.leftViewController
-        case .Right:
+        case .right:
             return self.rightViewController
-        case .None:
+        case .none:
             return nil
         }
     }
     
-    func replaceViewController(sourceViewController: UIViewController?, destinationViewController: UIViewController, container: UIView) {
+    func replaceViewController(_ sourceViewController: UIViewController?, destinationViewController: UIViewController, container: UIView) {
         
-        sourceViewController?.willMoveToParentViewController(nil)
+        sourceViewController?.willMove(toParentViewController: nil)
         sourceViewController?.view.removeFromSuperview()
         sourceViewController?.removeFromParentViewController()
         
@@ -145,24 +145,24 @@ public class KGDrawerViewController: UIViewController {
         container.addSubview(destinationViewController.view)
         
         let destinationView = destinationViewController.view
-        destinationView.translatesAutoresizingMaskIntoConstraints = false
+        destinationView?.translatesAutoresizingMaskIntoConstraints = false
         
         container.removeConstraints(container.constraints)
         
-        let views: [String:UIView] = ["v1" : destinationView]
-        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        container.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        let views: [String:UIView] = ["v1" : destinationView!]
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
         
-        destinationViewController.didMoveToParentViewController(self)
+        destinationViewController.didMove(toParentViewController: self)
     }
     
     // MARK: Private computed properties
     
-    public var currentlyOpenedSide: KGDrawerSide = .None
+    open var currentlyOpenedSide: KGDrawerSide = .none
     
     // MARK: Accessors
-    private var _leftViewController: UIViewController?
-    public var leftViewController: UIViewController? {
+    fileprivate var _leftViewController: UIViewController?
+    open var leftViewController: UIViewController? {
         get {
             return _leftViewController
         }
@@ -172,8 +172,8 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    private var _rightViewController: UIViewController?
-    public var rightViewController: UIViewController? {
+    fileprivate var _rightViewController: UIViewController?
+    open var rightViewController: UIViewController? {
         get {
             return _rightViewController
         }
@@ -183,8 +183,8 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    private var _centerViewController: UIViewController?
-    public var centerViewController: UIViewController? {
+    fileprivate var _centerViewController: UIViewController?
+    open var centerViewController: UIViewController? {
         get {
             return _centerViewController
         }
@@ -194,13 +194,13 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    private lazy var toggleDrawerTapGestureRecognizer: UITapGestureRecognizer = {
+    fileprivate lazy var toggleDrawerTapGestureRecognizer: UITapGestureRecognizer = {
         [unowned self] in
-        let gesture = UITapGestureRecognizer(target: self, action: "centerViewContainerTapped:")
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(KGDrawerViewController.centerViewContainerTapped(_:)))
         return gesture
     }()
     
-    public var leftDrawerWidth: CGFloat {
+    open var leftDrawerWidth: CGFloat {
         get  {
             return drawerView.leftViewContainerWidth
         }
@@ -209,7 +209,7 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    public var rightDrawerWidth: CGFloat {
+    open var rightDrawerWidth: CGFloat {
         get {
             return drawerView.rightViewContainerWidth
         }
@@ -218,19 +218,19 @@ public class KGDrawerViewController: UIViewController {
         }
     }
     
-    public var leftDrawerRevealWidth: CGFloat {
+    open var leftDrawerRevealWidth: CGFloat {
         get {
             return drawerView.leftViewContainerWidth
         }
     }
     
-    public var rightDrawerRevealWidth: CGFloat {
+    open var rightDrawerRevealWidth: CGFloat {
         get {
             return drawerView.rightViewContainerWidth
         }
     }
     
-    public var backgroundImage: UIImage? {
+    open var backgroundImage: UIImage? {
         get {
             return drawerView.backgroundImageView.image
         }
@@ -241,17 +241,17 @@ public class KGDrawerViewController: UIViewController {
     
     // MARK: Status Bar
     
-    override public func childViewControllerForStatusBarHidden() -> UIViewController? {
+    override open var childViewControllerForStatusBarHidden : UIViewController? {
         return centerViewController
     }
     
-    override public func childViewControllerForStatusBarStyle() -> UIViewController? {
+    override open var childViewControllerForStatusBarStyle : UIViewController? {
         return centerViewController
     }
     
     // MARK: Memory Management
     
-    override public func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     

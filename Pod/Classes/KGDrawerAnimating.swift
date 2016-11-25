@@ -11,9 +11,9 @@ import UIKit
 
 public protocol KGDrawerAnimating {
     
-    func openDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void)
+    func openDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (_ finished: Bool) -> Void)
     
-    func dismissDrawer(side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (finished: Bool) -> Void)
+    func dismissDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: (_ finished: Bool) -> Void)
     
     
     /**
@@ -23,7 +23,7 @@ public protocol KGDrawerAnimating {
     *  @param the containing side view that is shown.
     *  @param the containing centre view.
     */
-    func willRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView)
+    func willRotateWithDrawerOpen(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView)
     
     /**
     *  Called following a rotation event, while a drawer view is being shown.
@@ -33,6 +33,6 @@ public protocol KGDrawerAnimating {
     *  @param the containing centre view.
     *  @param a complete block handler to handle cleanup.
     */
-    func didRotateWithDrawerOpen(side: KGDrawerSide, drawerView: UIView, centerView: UIView)
+    func didRotateWithDrawerOpen(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView)
     
 }
