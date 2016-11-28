@@ -7,6 +7,10 @@ twist on the nav drawer pattern.
 
 ![](https://github.com/KyleGoddard/KGFloatingDrawer/blob/master/kgfloatingdrawer_github_preview.gif)
 
+#Update
+
+Currently working on updating this for Swift 3 and to take care of some of the reported issues.
+
 #Usage
 
 ```swift
