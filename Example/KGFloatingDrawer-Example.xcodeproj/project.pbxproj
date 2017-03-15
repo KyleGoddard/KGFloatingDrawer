@@ -15,7 +15,8 @@
 		1F441C1B1AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C151AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift */; };
 		1F441C1C1AA6AE19005772A1 /* KGDrawerWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C161AA6AE19005772A1 /* KGDrawerWebViewViewController.swift */; };
 		1F441C1D1AA6AE19005772A1 /* LeftDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C171AA6AE19005772A1 /* LeftDrawerTableViewController.swift */; };
-		8C09F118ED931F787483136F /* Pods_KGFloatingDrawer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7AB4AD50B7DF8EACDDFEA6C9 /* Pods_KGFloatingDrawer_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A2BF2A08CDDC5EC818DE /* Pods_KGFloatingDrawer_ExampleTests.framework */; };
+		BBEB6FBA4E19B54C810609EA /* Pods_KGFloatingDrawer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE9FD8BA2ADB3E13FA593A0 /* Pods_KGFloatingDrawer_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.release.xcconfig"; sourceTree = "<group>"; };
 		1F441BED1AA6A745005772A1 /* KGFloatingDrawer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KGFloatingDrawer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F441BF11AA6A745005772A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F441BFC1AA6A745005772A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -43,7 +42,12 @@
 		1F441C151AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerSettingsTableViewController.swift; sourceTree = "<group>"; };
 		1F441C161AA6AE19005772A1 /* KGDrawerWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerWebViewViewController.swift; sourceTree = "<group>"; };
 		1F441C171AA6AE19005772A1 /* LeftDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerTableViewController.swift; sourceTree = "<group>"; };
-		DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B9A2BF2A08CDDC5EC818DE /* Pods_KGFloatingDrawer_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE9FD8BA2ADB3E13FA593A0 /* Pods_KGFloatingDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72DE17FCE2FA1AD4B12A8430 /* Pods-KGFloatingDrawer-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.release.xcconfig"; sourceTree = "<group>"; };
+		B6C811ABB59F568358E00B23 /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8CD46B25969FEA58DF4B568 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB775C77DD9C8B1B7B17341A /* Pods-KGFloatingDrawer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C09F118ED931F787483136F /* Pods_KGFloatingDrawer_Example.framework in Frameworks */,
+				BBEB6FBA4E19B54C810609EA /* Pods_KGFloatingDrawer_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB4AD50B7DF8EACDDFEA6C9 /* Pods_KGFloatingDrawer_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +76,8 @@
 				1F441BEF1AA6A745005772A1 /* KGFloatingDrawer-Example */,
 				1F441C051AA6A745005772A1 /* KGFloatingDrawer-ExampleTests */,
 				1F441BEE1AA6A745005772A1 /* Products */,
-				550CB92250482D0B3A327A9E /* Pods */,
-				E6FFB1C99687606A26E9F6A0 /* Frameworks */,
+				8E9412E495396AEC78DD9DE2 /* Pods */,
+				3FCC537C7176C6FA056F5CDC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,21 +130,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		550CB92250482D0B3A327A9E /* Pods */ = {
+		3FCC537C7176C6FA056F5CDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */,
-				1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E6FFB1C99687606A26E9F6A0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */,
+				3DE9FD8BA2ADB3E13FA593A0 /* Pods_KGFloatingDrawer_Example.framework */,
+				20B9A2BF2A08CDDC5EC818DE /* Pods_KGFloatingDrawer_ExampleTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E9412E495396AEC78DD9DE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB775C77DD9C8B1B7B17341A /* Pods-KGFloatingDrawer-Example.debug.xcconfig */,
+				72DE17FCE2FA1AD4B12A8430 /* Pods-KGFloatingDrawer-Example.release.xcconfig */,
+				C8CD46B25969FEA58DF4B568 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */,
+				B6C811ABB59F568358E00B23 /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,12 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F441C0C1AA6A745005772A1 /* Build configuration list for PBXNativeTarget "KGFloatingDrawer-Example" */;
 			buildPhases = (
-				EEBDE45A7F2FD9E056F739EB /* Check Pods Manifest.lock */,
+				5FC07C5E46CB052B4ED8E902 /* [CP] Check Pods Manifest.lock */,
 				1F441BE91AA6A745005772A1 /* Sources */,
 				1F441BEA1AA6A745005772A1 /* Frameworks */,
 				1F441BEB1AA6A745005772A1 /* Resources */,
-				F48B17B99145B962BCF52BE3 /* Embed Pods Frameworks */,
-				69DC89266D137194AFB03EF6 /* Copy Pods Resources */,
+				EF6063587ECB5B356DE6184A /* [CP] Embed Pods Frameworks */,
+				F4C582DD40800F24ADDAB643 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F441C0F1AA6A745005772A1 /* Build configuration list for PBXNativeTarget "KGFloatingDrawer-ExampleTests" */;
 			buildPhases = (
+				0BFFA2E396E8CC725A90351A /* [CP] Check Pods Manifest.lock */,
 				1F441BFE1AA6A745005772A1 /* Sources */,
 				1F441BFF1AA6A745005772A1 /* Frameworks */,
 				1F441C001AA6A745005772A1 /* Resources */,
+				0E67F3973E35428F9A419C99 /* [CP] Embed Pods Frameworks */,
+				0BC2D04C8F276C978B75DE4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,9 +207,12 @@
 				TargetAttributes = {
 					1F441BEC1AA6A745005772A1 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = P75L6RL67A;
+						LastSwiftMigration = 0820;
 					};
 					1F441C011AA6A745005772A1 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = 1F441BEC1AA6A745005772A1;
 					};
 				};
@@ -243,49 +257,94 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69DC89266D137194AFB03EF6 /* Copy Pods Resources */ = {
+		0BC2D04C8F276C978B75DE4B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEBDE45A7F2FD9E056F739EB /* Check Pods Manifest.lock */ = {
+		0BFFA2E396E8CC725A90351A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F48B17B99145B962BCF52BE3 /* Embed Pods Frameworks */ = {
+		0E67F3973E35428F9A419C99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FC07C5E46CB052B4ED8E902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF6063587ECB5B356DE6184A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4C582DD40800F24ADDAB643 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -416,32 +475,37 @@
 		};
 		1F441C0D1AA6A745005772A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */;
+			baseConfigurationReference = FB775C77DD9C8B1B7B17341A /* Pods-KGFloatingDrawer-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P75L6RL67A;
 				INFOPLIST_FILE = "KGFloatingDrawer-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.kgoddard.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.kgoddard.KGFloatingDrawer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1F441C0E1AA6A745005772A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */;
+			baseConfigurationReference = 72DE17FCE2FA1AD4B12A8430 /* Pods-KGFloatingDrawer-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P75L6RL67A;
 				INFOPLIST_FILE = "KGFloatingDrawer-Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.kgoddard.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.kgoddard.KGFloatingDrawer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1F441C101AA6A745005772A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8CD46B25969FEA58DF4B568 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -456,12 +520,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.kgoddard.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGFloatingDrawer-Example.app/KGFloatingDrawer-Example";
 			};
 			name = Debug;
 		};
 		1F441C111AA6A745005772A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6C811ABB59F568358E00B23 /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -472,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.kgoddard.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KGFloatingDrawer-Example.app/KGFloatingDrawer-Example";
 			};
 			name = Release;

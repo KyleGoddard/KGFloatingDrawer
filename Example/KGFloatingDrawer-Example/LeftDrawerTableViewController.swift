@@ -27,8 +27,8 @@ class LeftDrawerTableViewController: UITableViewController {
     
     // MARK: <TableViewDataSource>
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if indexPath.row == 2 {
             appDelegate.centerViewController = appDelegate.sourcePageViewController()
         } else if indexPath.row == 3 {
@@ -36,8 +36,8 @@ class LeftDrawerTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
     }
 
 }
