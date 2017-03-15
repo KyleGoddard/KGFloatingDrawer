@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_KGFloatingDrawer_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_KGFloatingDrawer_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_KGFloatingDrawer_ExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_KGFloatingDrawer_ExampleTestsVersionString[];
 
