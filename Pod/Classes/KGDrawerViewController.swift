@@ -116,7 +116,7 @@ open class KGDrawerViewController: UIViewController {
         centerViewController?.view.isUserInteractionEnabled = true
     }
     
-    func centerViewContainerTapped(_ sender: AnyObject) {
+    @objc func centerViewContainerTapped(_ sender: AnyObject) {
         closeDrawer(currentlyOpenedSide, animated: true) { (finished) -> Void in
             // Do nothing
         }

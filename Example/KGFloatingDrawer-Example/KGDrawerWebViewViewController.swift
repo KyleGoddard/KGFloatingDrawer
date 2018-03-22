@@ -17,9 +17,9 @@ class KGDrawerWebViewViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let url: NSURL = NSURL(string: "https://github.com/KyleGoddard/KGFloatingDrawer")!
-        let request = NSURLRequest(URL: url)
+        let request = NSURLRequest(url: url as URL)
         
-        webView.loadRequest(request)
+        webView.loadRequest(request as URLRequest)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,12 +39,12 @@ class KGDrawerWebViewViewController: UIViewController {
     */
     
     @IBAction func toggleLeftDrawer(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toggleLeftDrawer(sender, animated: false)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.toggleLeftDrawer(sender: sender, animated: false)
     }
     
     @IBAction func toggleRightDrawer(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toggleRightDrawer(sender, animated: true)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.toggleRightDrawer(sender: sender, animated: true)
     }
 }

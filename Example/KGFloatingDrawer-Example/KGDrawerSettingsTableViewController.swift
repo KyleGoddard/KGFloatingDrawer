@@ -20,8 +20,8 @@ class KGDrawerSettingsTableViewController: UITableViewController {
     
     var animator: KGDrawerSpringAnimator?
     
-    var defaultDuration: NSTimeInterval?
-    var defaultDelay: NSTimeInterval?
+    var defaultDuration: TimeInterval?
+    var defaultDelay: TimeInterval?
     var defaultSpringVelocity: CGFloat?
     var defaultSpringDamping: CGFloat?
     
@@ -39,9 +39,9 @@ class KGDrawerSettingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        if let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+        if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
             animator = appDelegate.drawerViewController.animator
-            captureDefaultValues(animator!)
+            captureDefaultValues(animator: animator!)
             reset()
         }
     }
@@ -61,8 +61,8 @@ class KGDrawerSettingsTableViewController: UITableViewController {
     
     func updateAnimator() {
         if let currentAnimator = animator {
-            currentAnimator.animationDuration = NSTimeInterval(defaultDuration!)
-            currentAnimator.animationDelay = NSTimeInterval(defaultDelay!)
+            currentAnimator.animationDuration = TimeInterval(defaultDuration!)
+            currentAnimator.animationDelay = TimeInterval(defaultDelay!)
             currentAnimator.initialSpringVelocity = defaultSpringVelocity!
             currentAnimator.springDamping = defaultSpringDamping!
         }
@@ -84,12 +84,12 @@ class KGDrawerSettingsTableViewController: UITableViewController {
     
     @IBAction func durationSliderChanged(sender: UISlider) {
         durationLabel.text = String(format: "%.2f", sender.value)
-        animator?.animationDuration = NSTimeInterval(sender.value)
+        animator?.animationDuration = TimeInterval(sender.value)
     }
     
     @IBAction func delaySliderChanged(sender: UISlider) {
         delayLabel.text = String(format: "%.2f", sender.value)
-        animator?.animationDelay = NSTimeInterval(sender.value)
+        animator?.animationDelay = TimeInterval(sender.value)
     }
     
     @IBAction func springVelocitySliderChanged(sender: UISlider) {
@@ -108,16 +108,16 @@ class KGDrawerSettingsTableViewController: UITableViewController {
     }
 
     @IBAction func toggleLeftDrawer(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toggleLeftDrawer(sender, animated: false)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.toggleLeftDrawer(sender: sender, animated: false)
     }
     
     @IBAction func toggleRightDrawer(sender: AnyObject) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.toggleRightDrawer(sender, animated: true)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.toggleRightDrawer(sender: sender, animated: true)
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRowIndex:Int = indexPath.section
         if selectedRowIndex == resetRowIndex {
             reset()
