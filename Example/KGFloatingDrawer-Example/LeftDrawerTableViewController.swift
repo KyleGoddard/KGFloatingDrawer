@@ -9,17 +9,17 @@
 import UIKit
 
 class LeftDrawerTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,17 +27,16 @@ class LeftDrawerTableViewController: UITableViewController {
     
     // MARK: <TableViewDataSource>
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if indexPath.row == 2 {
-            appDelegate.centerViewController = appDelegate.sourcePageViewController()
+            
         } else if indexPath.row == 3 {
             appDelegate.centerViewController = appDelegate.drawerSettingsViewController()
         }
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        cell.backgroundColor = UIColor.clearColor()
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = .clear
     }
-
 }

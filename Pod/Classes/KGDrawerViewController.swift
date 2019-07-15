@@ -23,7 +23,7 @@ open class KGDrawerViewController: UIViewController {
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
-
+    
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -68,7 +68,7 @@ open class KGDrawerViewController: UIViewController {
                 let centerView = drawerView.centerViewContainer
                 if currentlyOpenedSide != .none {
                     closeDrawer(side, animated: animated) { finished in
-                            self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
+                        self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
                     }
                 } else {
                     self.animator.openDrawer(side, drawerView: sideView, centerView: centerView, animated: animated, complete: complete)
@@ -116,7 +116,7 @@ open class KGDrawerViewController: UIViewController {
         centerViewController?.view.isUserInteractionEnabled = true
     }
     
-    func centerViewContainerTapped(_ sender: AnyObject) {
+    @objc func centerViewContainerTapped(_ sender: AnyObject) {
         closeDrawer(currentlyOpenedSide, animated: true) { (finished) -> Void in
             // Do nothing
         }
@@ -137,11 +137,11 @@ open class KGDrawerViewController: UIViewController {
     
     func replaceViewController(_ sourceViewController: UIViewController?, destinationViewController: UIViewController, container: UIView) {
         
-        sourceViewController?.willMove(toParentViewController: nil)
+        sourceViewController?.willMove(toParent: nil)
         sourceViewController?.view.removeFromSuperview()
-        sourceViewController?.removeFromParentViewController()
+        sourceViewController?.removeFromParent()
         
-        self.addChildViewController(destinationViewController)
+        self.addChild(destinationViewController)
         container.addSubview(destinationViewController.view)
         
         let destinationView = destinationViewController.view
@@ -150,10 +150,10 @@ open class KGDrawerViewController: UIViewController {
         container.removeConstraints(container.constraints)
         
         let views: [String:UIView] = ["v1" : destinationView!]
-        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v1]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
         
-        destinationViewController.didMove(toParentViewController: self)
+        destinationViewController.didMove(toParent: self)
     }
     
     // MARK: Private computed properties
@@ -198,7 +198,7 @@ open class KGDrawerViewController: UIViewController {
         [unowned self] in
         let gesture = UITapGestureRecognizer(target: self, action: #selector(KGDrawerViewController.centerViewContainerTapped(_:)))
         return gesture
-    }()
+        }()
     
     open var leftDrawerWidth: CGFloat {
         get  {
@@ -241,11 +241,11 @@ open class KGDrawerViewController: UIViewController {
     
     // MARK: Status Bar
     
-    override open var childViewControllerForStatusBarHidden : UIViewController? {
+    override open var childForStatusBarHidden : UIViewController? {
         return centerViewController
     }
     
-    override open var childViewControllerForStatusBarStyle : UIViewController? {
+    override open var childForStatusBarStyle : UIViewController? {
         return centerViewController
     }
     
