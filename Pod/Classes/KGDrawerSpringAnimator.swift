@@ -40,7 +40,7 @@ open class KGDrawerSpringAnimator: NSObject {
             view.transform = CGAffineTransform.identity
         }
     }
-
+    
 }
 
 extension KGDrawerSpringAnimator: KGDrawerAnimating {
@@ -48,14 +48,14 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
     public func openDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete:  @escaping (Bool) -> Void) {
         if (animated) {
             UIView.animate(withDuration: animationDuration,
-                delay: animationDelay,
-                usingSpringWithDamping: springDamping,
-                initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.curveLinear,
-                animations: {
-                    self.applyTransforms(side, drawerView: drawerView, centerView: centerView)
-                    
-                }, completion: complete)
+                           delay: animationDelay,
+                           usingSpringWithDamping: springDamping,
+                           initialSpringVelocity: initialSpringVelocity,
+                           options: UIView.AnimationOptions.curveLinear,
+                           animations: {
+                            self.applyTransforms(side, drawerView: drawerView, centerView: centerView)
+                            
+            }, completion: complete)
         } else {
             self.applyTransforms(side, drawerView: drawerView, centerView: centerView)
         }
@@ -64,12 +64,12 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
     public func dismissDrawer(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView, animated: Bool, complete: @escaping (Bool) -> Void) {
         if (animated) {
             UIView.animate(withDuration: animationDuration,
-                delay: animationDelay,
-                usingSpringWithDamping: springDamping,
-                initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.curveLinear,
-                animations: {
-                    self.resetTransforms([drawerView, centerView])
+                           delay: animationDelay,
+                           usingSpringWithDamping: springDamping,
+                           initialSpringVelocity: initialSpringVelocity,
+                           options: UIView.AnimationOptions.curveLinear,
+                           animations: {
+                            self.resetTransforms([drawerView, centerView])
             }, completion: complete)
         } else {
             self.resetTransforms([drawerView, centerView])
@@ -82,11 +82,11 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
     
     public func didRotateWithDrawerOpen(_ side: KGDrawerSide, drawerView: UIView, centerView: UIView) {
         UIView.animate(withDuration: animationDuration,
-            delay: animationDelay,
-            usingSpringWithDamping: springDamping,
-            initialSpringVelocity: initialSpringVelocity,
-            options: UIViewAnimationOptions.curveLinear,
-            animations: {}, completion: nil )
+                       delay: animationDelay,
+                       usingSpringWithDamping: springDamping,
+                       initialSpringVelocity: initialSpringVelocity,
+                       options: UIView.AnimationOptions.curveLinear,
+                       animations: {}, completion: nil )
     }
     
 }

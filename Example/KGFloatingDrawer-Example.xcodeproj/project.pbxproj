@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		123F68C717651F19F7C8F7D9 /* Pods_KGFloatingDrawer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F91D209433C2F72D171FB6 /* Pods_KGFloatingDrawer_Example.framework */; };
 		1F441BFD1AA6A745005772A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F441BFB1AA6A745005772A1 /* LaunchScreen.xib */; };
 		1F441C091AA6A745005772A1 /* KGFloatingDrawer_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C081AA6A745005772A1 /* KGFloatingDrawer_ExampleTests.swift */; };
 		1F441C181AA6AE19005772A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C121AA6AE19005772A1 /* AppDelegate.swift */; };
@@ -15,7 +16,7 @@
 		1F441C1B1AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C151AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift */; };
 		1F441C1C1AA6AE19005772A1 /* KGDrawerWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C161AA6AE19005772A1 /* KGDrawerWebViewViewController.swift */; };
 		1F441C1D1AA6AE19005772A1 /* LeftDrawerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F441C171AA6AE19005772A1 /* LeftDrawerTableViewController.swift */; };
-		8C09F118ED931F787483136F /* Pods_KGFloatingDrawer_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		806E733977E9B5407B1ABB92 /* Pods_KGFloatingDrawer_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C544AAFDD754DFC176AA6A /* Pods_KGFloatingDrawer_ExampleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,21 +30,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.release.xcconfig"; sourceTree = "<group>"; };
+		1E16E4BF1DE91FAEFAB9903B /* Pods-KGFloatingDrawer-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.debug.xcconfig"; path = "Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1F441BED1AA6A745005772A1 /* KGFloatingDrawer-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KGFloatingDrawer-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F441BF11AA6A745005772A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F441BFC1AA6A745005772A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1F441C021AA6A745005772A1 /* KGFloatingDrawer-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KGFloatingDrawer-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F441C071AA6A745005772A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F441C081AA6A745005772A1 /* KGFloatingDrawer_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KGFloatingDrawer_ExampleTests.swift; sourceTree = "<group>"; };
-		1F441C121AA6AE19005772A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F441C121AA6AE19005772A1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1F441C131AA6AE19005772A1 /* Drawers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drawers.storyboard; sourceTree = "<group>"; };
 		1F441C141AA6AE19005772A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1F441C151AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerSettingsTableViewController.swift; sourceTree = "<group>"; };
-		1F441C161AA6AE19005772A1 /* KGDrawerWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerWebViewViewController.swift; sourceTree = "<group>"; };
-		1F441C171AA6AE19005772A1 /* LeftDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerTableViewController.swift; sourceTree = "<group>"; };
-		DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F441C151AA6AE19005772A1 /* KGDrawerSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerSettingsTableViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		1F441C161AA6AE19005772A1 /* KGDrawerWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGDrawerWebViewViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		1F441C171AA6AE19005772A1 /* LeftDrawerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerTableViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		32C544AAFDD754DFC176AA6A /* Pods_KGFloatingDrawer_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45285703E1FEC57C335B8ADC /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-ExampleTests.release.xcconfig"; path = "Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A8138A82EA93310804F84EA /* Pods-KGFloatingDrawer-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-Example.release.xcconfig"; path = "Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example.release.xcconfig"; sourceTree = "<group>"; };
+		78F91D209433C2F72D171FB6 /* Pods_KGFloatingDrawer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KGFloatingDrawer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15F4ED4853ECE22A63BD431 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-KGFloatingDrawer-ExampleTests/Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C09F118ED931F787483136F /* Pods_KGFloatingDrawer_Example.framework in Frameworks */,
+				123F68C717651F19F7C8F7D9 /* Pods_KGFloatingDrawer_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				806E733977E9B5407B1ABB92 /* Pods_KGFloatingDrawer_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +76,11 @@
 				1F441BEF1AA6A745005772A1 /* KGFloatingDrawer-Example */,
 				1F441C051AA6A745005772A1 /* KGFloatingDrawer-ExampleTests */,
 				1F441BEE1AA6A745005772A1 /* Products */,
-				550CB92250482D0B3A327A9E /* Pods */,
-				E6FFB1C99687606A26E9F6A0 /* Frameworks */,
+				C5240CDD552A3AAB49EA9290 /* Pods */,
+				FF2F98923FCEC8ABADA11DB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1F441BEE1AA6A745005772A1 /* Products */ = {
 			isa = PBXGroup;
@@ -125,19 +131,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		550CB92250482D0B3A327A9E /* Pods */ = {
+		C5240CDD552A3AAB49EA9290 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */,
-				1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */,
+				1E16E4BF1DE91FAEFAB9903B /* Pods-KGFloatingDrawer-Example.debug.xcconfig */,
+				6A8138A82EA93310804F84EA /* Pods-KGFloatingDrawer-Example.release.xcconfig */,
+				D15F4ED4853ECE22A63BD431 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */,
+				45285703E1FEC57C335B8ADC /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */,
 			);
-			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		E6FFB1C99687606A26E9F6A0 /* Frameworks */ = {
+		FF2F98923FCEC8ABADA11DB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA08E459ED5F3517BF19F394 /* Pods_KGFloatingDrawer_Example.framework */,
+				78F91D209433C2F72D171FB6 /* Pods_KGFloatingDrawer_Example.framework */,
+				32C544AAFDD754DFC176AA6A /* Pods_KGFloatingDrawer_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,12 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F441C0C1AA6A745005772A1 /* Build configuration list for PBXNativeTarget "KGFloatingDrawer-Example" */;
 			buildPhases = (
-				EEBDE45A7F2FD9E056F739EB /* Check Pods Manifest.lock */,
+				B10B9D68B0E77D2F2A66035A /* [CP] Check Pods Manifest.lock */,
 				1F441BE91AA6A745005772A1 /* Sources */,
 				1F441BEA1AA6A745005772A1 /* Frameworks */,
 				1F441BEB1AA6A745005772A1 /* Resources */,
-				F48B17B99145B962BCF52BE3 /* Embed Pods Frameworks */,
-				69DC89266D137194AFB03EF6 /* Copy Pods Resources */,
+				CBF6865FF8B05C8879906432 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +177,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F441C0F1AA6A745005772A1 /* Build configuration list for PBXNativeTarget "KGFloatingDrawer-ExampleTests" */;
 			buildPhases = (
+				4314479EB46659440B9227B8 /* [CP] Check Pods Manifest.lock */,
 				1F441BFE1AA6A745005772A1 /* Sources */,
 				1F441BFF1AA6A745005772A1 /* Frameworks */,
 				1F441C001AA6A745005772A1 /* Resources */,
@@ -191,7 +200,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Kyle Goddard";
 				TargetAttributes = {
 					1F441BEC1AA6A745005772A1 = {
@@ -205,7 +214,7 @@
 			};
 			buildConfigurationList = 1F441BE81AA6A745005772A1 /* Build configuration list for PBXProject "KGFloatingDrawer-Example" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -243,49 +252,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69DC89266D137194AFB03EF6 /* Copy Pods Resources */ = {
+		4314479EB46659440B9227B8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KGFloatingDrawer-ExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEBDE45A7F2FD9E056F739EB /* Check Pods Manifest.lock */ = {
+		B10B9D68B0E77D2F2A66035A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KGFloatingDrawer-Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F48B17B99145B962BCF52BE3 /* Embed Pods Frameworks */ = {
+		CBF6865FF8B05C8879906432 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KGFloatingDrawer/KGFloatingDrawer.framework",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KGFloatingDrawer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KGFloatingDrawer-Example/Pods-KGFloatingDrawer-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -340,13 +366,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -356,6 +392,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -373,6 +410,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -385,13 +423,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -400,6 +448,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -409,6 +458,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -416,7 +467,7 @@
 		};
 		1F441C0D1AA6A745005772A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01B2AB81D863D8EDA47432CC /* Pods-KGFloatingDrawer-Example.debug.xcconfig */;
+			baseConfigurationReference = 1E16E4BF1DE91FAEFAB9903B /* Pods-KGFloatingDrawer-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "KGFloatingDrawer-Example/Info.plist";
@@ -429,7 +480,7 @@
 		};
 		1F441C0E1AA6A745005772A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DC3D2E52604AA455F7D40D7 /* Pods-KGFloatingDrawer-Example.release.xcconfig */;
+			baseConfigurationReference = 6A8138A82EA93310804F84EA /* Pods-KGFloatingDrawer-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "KGFloatingDrawer-Example/Info.plist";
@@ -442,6 +493,7 @@
 		};
 		1F441C101AA6A745005772A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15F4ED4853ECE22A63BD431 /* Pods-KGFloatingDrawer-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -462,6 +514,7 @@
 		};
 		1F441C111AA6A745005772A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45285703E1FEC57C335B8ADC /* Pods-KGFloatingDrawer-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

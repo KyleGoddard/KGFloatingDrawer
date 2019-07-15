@@ -34,7 +34,7 @@ open class KGDrawerView: UIView {
     }
     
     override open func willMove(toSuperview newSuperview: UIView?) {
-        self.bringSubview(toFront: self.centerViewContainer)
+        self.bringSubviewToFront(self.centerViewContainer)
     }
     
     override open func layoutSubviews() {
