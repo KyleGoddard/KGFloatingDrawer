@@ -1,0 +1,6 @@
+framework module KGFloatingDrawer {
+  umbrella header "KGFloatingDrawer-umbrella.h"
+
+  export *
+  module * { export * }
+}

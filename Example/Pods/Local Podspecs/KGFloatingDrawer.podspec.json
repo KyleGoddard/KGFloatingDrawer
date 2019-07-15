@@ -1,6 +1,6 @@
 {
   "name": "KGFloatingDrawer",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "summary": "A floating navigation drawer with an interesting animated presentation written in Swift.",
   "homepage": "https://github.com/KyleGoddard/KGFloatingDrawer",
   "screenshots": [
@@ -18,7 +18,7 @@
   },
   "source": {
     "git": "https://github.com/KyleGoddard/KGFloatingDrawer.git",
-    "tag": "0.1.3"
+    "tag": "0.2.0"
   },
   "source_files": "Pod/Classes/"
 }
