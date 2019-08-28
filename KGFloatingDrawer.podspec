@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author                = { "KyleGoddard" => "kylegoddard@gmail.com" }
 
   s.requires_arc          = true
-  s.platform              = :ios, "8.0"
+  s.platform              = :ios, "11.0"
   s.ios.deployment_target = "8.0"
   s.swift_versions        = ['4.2', '5']
   s.source                = { :git => "https://github.com/KyleGoddard/KGFloatingDrawer.git", :tag => s.version.to_s }
