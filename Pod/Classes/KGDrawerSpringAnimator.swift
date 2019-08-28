@@ -51,7 +51,7 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
                 delay: animationDelay,
                 usingSpringWithDamping: springDamping,
                 initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.curveLinear,
+                options: UIView.AnimationOptions.curveLinear,
                 animations: {
                     self.applyTransforms(side, drawerView: drawerView, centerView: centerView)
                     
@@ -67,7 +67,7 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
                 delay: animationDelay,
                 usingSpringWithDamping: springDamping,
                 initialSpringVelocity: initialSpringVelocity,
-                options: UIViewAnimationOptions.curveLinear,
+                options: UIView.AnimationOptions.curveLinear,
                 animations: {
                     self.resetTransforms([drawerView, centerView])
             }, completion: complete)
@@ -85,7 +85,7 @@ extension KGDrawerSpringAnimator: KGDrawerAnimating {
             delay: animationDelay,
             usingSpringWithDamping: springDamping,
             initialSpringVelocity: initialSpringVelocity,
-            options: UIViewAnimationOptions.curveLinear,
+            options: UIView.AnimationOptions.curveLinear,
             animations: {}, completion: nil )
     }
     
